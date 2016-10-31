@@ -1,0 +1,18 @@
+/* Footer design */
+
+.footer {
+  height: 100px;
+  /*padding: 20px 10px 5px 10px;*/
+}
+.footer p {
+
+}
+.footer-icon {
+  text-decoration: none;
+  color: #CCCCCC;
+  padding: 20px 10px;
+  transition: color 15  0ms ease;
+}
+.footer-icon:hover {
+  color: #e62117;
+}

@@ -1,0 +1,23 @@
+<div class="text-center wrapper-white padded">
+  <h1>Our team</h1>
+  <ul class="list-inline">
+    <div class="container">
+      <div class="row">
+        <% ["Saleve", "Alpes", "Jura"].each do |mountain| %>
+        <li>
+          <div class="col-xs-6 col-sm-4">
+            <h2><%= mountain %></h2>
+            <%= image_tag "https://placehold.it/100x100", class: "img-circle" %>
+          </div>
+        </li>
+        <% end %>
+      </div>
+    </div>
+  </ul>
+  <div class="padded">
+    <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+    <% link_to "#" do %>
+      contact@airbnb.com
+    <% end %>
+  </div>
+</div>
