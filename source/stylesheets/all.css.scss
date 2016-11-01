@@ -13,3 +13,17 @@
 @import "components/*";
 @import "pages/*";
 @import "vendor/*";
+
+.height-parent {
+  height: 100%;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}

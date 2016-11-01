@@ -1,0 +1,54 @@
+aragorn:
+  owner_name: Aragorn
+  owner_picture: aragorn.jpg
+  owner_city: Minas Tirith
+  flat_name: Aragorn's castle
+  flat_picture: aragorn-house.jpg
+  flat_description: Humble castle with nice view on valley
+  rating: 4
+  race: Human
+galadriel:
+  owner_name: Galadriel
+  owner_picture: galadriel.jpg
+  owner_city: Fangorn Forest
+  flat_name: Galadriel's tree house
+  flat_picture: galadriel-house.jpg
+  flat_description: Mystical tree house in magical forest
+  rating: 5
+  race: Elf
+samwise:
+  owner_name: Samwise
+  owner_picture: samwise.jpg
+  owner_city: Hobbiton
+  flat_name: Sam's Shire house
+  flat_picture: samwise-house.jpg
+  flat_description: Rustic hobbit house in beautiful Shire
+  rating: 4
+  race: Hobbit
+lurtz:
+  owner_name: Lurtz
+  owner_picture: lurtz.jpg
+  owner_city: Middle Earth
+  flat_name: Lurtz's baths
+  flat_picture: lurtz-house.jpg
+  flat_description: Natural spring with free undead massages
+  rating: 1
+  race: Orc
+sauron:
+  owner_name: Sauron
+  owner_picture: sauron2.png
+  owner_city: Mordor
+  flat_name: Sauron's Lair
+  flat_picture: mordor.png
+  flat_description: Dark tower with local saunas.
+  rating: 2
+  race: Magic
+saruman:
+  owner_name: Saruman
+  owner_picture: saruman2.jpg
+  owner_city: Isengard
+  flat_name: Saruman's High Tower
+  flat_picture: isengard.jpg
+  flat_description: Room with view on new-age industrial area
+  rating: 2
+  race: Wizard

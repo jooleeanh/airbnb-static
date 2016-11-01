@@ -21,22 +21,24 @@ $header-weight: 800;
 $base-size: 16px;
 $base-height: 1.4;
 
+// Avatar sizes
+$avatar-xs: 30px;
+$avatar-sm: 50px;
+$avatar-md: 80px;
+$avatar-lg: 150px;
+$avatar-xl: 300px;
+
 /* -------------------------------------
  * Colors
  * ------------------------------------- */
 // Scheme
 $brand-color: #D23333;
 
-// $red: #EE5F5B;
-// $blue: #469AE0;
-// $yellow: #FDB631;
-// $orange: #E67E22;
-// $green: #32B796;
-$red: red;
-$blue: blue;
-$yellow: yellow;
-$orange: orange;
-$green: green;
+$red: #EE5F5B;
+$blue: #469AE0;
+$yellow: #FDB631;
+$orange: #E67E22;
+$green: #32B796;
 
 // Gray scale
 $black:        black;

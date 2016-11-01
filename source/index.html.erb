@@ -1,12 +1,8 @@
----
-title: Le Wagon Middleman boilerplate
----
-
 <!-- Your banner code -->
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/banner-lotr4.jpg');">
   <div class="banner-content text-center">
-    <h1 class="welcome">Welcome Home</h1>
-    <p>Rent unique places to stay from local hosts in 190+ countries</p>
+    <h1 class="welcome">Welcome to Middle Earth</h1>
+    <p>Rent unique places to stay in the entire Middle Earth</p>
     <div class="search-form form-inline">
       <input type="text" class="form-control input-lg" placeholder="checkin">
       <input type="text" class="form-control input-lg" placeholder="checkout">
@@ -23,26 +19,13 @@ title: Le Wagon Middleman boilerplate
 <div class="wrapper-white padded text-center features">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="images/globe.png" alt="globe icon">
-        <h2>Discover the world</h2>
-        <p>The earth is your new home.</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="images/dollar.png" alt="dollar icon">
-        <h2>Pay online</h2>
-        <p>No cash issues anymore</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="images/beer.png" alt="beer icon">
-        <h2>Meet people</h2>
-        <p>Discover new culture and lifestyle.</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="images/heart.png" alt="heart icon">
-        <h2>Share and love</h2>
-        <p>Join a community you will love.</p>
-      </div>
+      <% data.icons.features.each do |feature, field| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= image_tag field.image, alt: feature + " icon" -%>
+          <h2><%= field.title %></h2>
+          <p><%= field.description %></p>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -52,39 +35,20 @@ title: Le Wagon Middleman boilerplate
   <div class="container">
     <h2 class="text-center">Your next trip</h2>
     <div class="row">
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-          <div class="card-category">Paris</div>
-          <div class="card-description">
-            <h2>Seb's home</h2>
-            <p>Charming room with patio</p>
+      <% data.flats.each do |owner, field| %>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <% link_to "#" do %>
+          <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/<%= field.flat_picture %>');">
+            <div class="card-category"><%= field.owner_city %></div>
+            <div class="card-description">
+              <h2><%= field.flat_name %></h2>
+              <p><%= field.flat_description %></p>
+            </div>
+            <%= image_tag field.owner_picture, class: "card-user avatar avatar-md" %>
           </div>
-          <img src="images/seb.jpg" alt="" class="card-user avatar avatar-large">
-          <a href="" class="card-link"></a>
-        </div>
+        <% end %>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-          <div class="card-category">Brussels</div>
-          <div class="card-description">
-            <h2>Anne's home</h2>
-            <p>Lovely house</p>
-          </div>
-          <img src="images/anne.jpg" alt="" class="card-user avatar avatar-large">
-          <a href="" class="card-link"></a>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-          <div class="card-category">London</div>
-          <div class="card-description">
-            <h2>Romain's home</h2>
-            <p>Nice flat in Piccadilly</p>
-          </div>
-          <img src="images/romain.jpeg" alt="" class="card-user avatar avatar-large">
-          <a href="" class="card-link"></a>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -100,10 +64,6 @@ title: Le Wagon Middleman boilerplate
     <button type="submit" class="btn btn-primary">Subscribe</button>
   </form>
 </div>
-
-<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!-- Your map code -->
 <div id="map" style="width: 100%; height: 500px;"></div>

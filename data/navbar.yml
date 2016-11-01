@@ -1,0 +1,4 @@
+profile_dropdown:
+  profile: Profile
+  dashboard: Dashboard
+  log_out: Log Out

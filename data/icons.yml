@@ -1,0 +1,22 @@
+fa:
+  youtube: fa-youtube
+  instagram: fa-instagram
+  facebook: fa-facebook
+  twitter: fa-twitter
+features:
+  globe:
+    title: Discover the world
+    description: The earth is your new home.
+    image: globe.png
+  dollar:
+    title: Pay online
+    description: No cash issues anymore.
+    image: dollar.png
+  beer:
+    title: Meet people
+    description: Discover new culture and lifestyle.
+    image: beer.png
+  heart:
+    title: Share and love
+    description: Join a community you will love.
+    image: heart.png
